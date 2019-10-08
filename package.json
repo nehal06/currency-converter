@@ -2,7 +2,7 @@
   "name": "currency-converter",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nehal06.github.io/currency-converter/src/",
+  "homepage": "https://nehal06.github.io/currency-converter/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.10.2",
