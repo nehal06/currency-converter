@@ -1,0 +1,304 @@
+html,
+body {
+  /* background: #09d3ac; */
+  font-family: 'Roboto', sans-serif;
+}
+
+.App {
+  /* text-align: center; */
+  /* width: calc(100% - 48px); */
+}
+
+.background {
+
+  position: fixed;
+  /* Preserve aspet ratio */
+  /* min-height: 100%; */
+
+  height:500px;
+}
+.dollarSvg,.rupeeSvg{
+  height:100%;
+}
+.background.dollar{
+  left:10px;
+  top:-10%;
+}
+.background.rupee{
+  bottom:-5%;
+  right:5%;
+  
+}
+.rupeeSvg{
+  transform: rotate(25deg);
+}
+.dollarSvg{
+  transform: rotate(-25deg);
+}
+.card {
+  width: 30%;
+  margin: auto;
+  height: auto;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 24px;
+  vertical-align: middle;
+  overflow: hidden;
+  z-index: 100;
+  /* box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.imgSection {
+  width: 40%;
+  display: block;
+  float: left;
+}
+
+.contentSection {
+  width: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.inputParent {
+  /* text-align: left; */
+  position: relative;
+}
+
+.flag {
+  height: 60px;
+  width: 60px;
+  float: left;
+}
+
+.inputField {
+  /* background: #c8d8f8; */
+  height: 3rem;
+  /* border-radius: 5px; */
+  font-size: 2rem;
+  box-shadow: 0.1px #ffffff;
+  border: none;
+  border-bottom: 1px solid #282c34;
+  margin: 10px 30px;
+  width: calc(100% - 120px);
+  position: relative;
+}
+
+
+/* .USD,
+.INR,
+.RATE {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 20px;
+  padding: 2px;
+
+} */
+
+.INR:after {
+  position: absolute;
+  content: '\20B9';
+  font-size: 18px;
+  margin: auto;
+  margin-left: 5px;
+}
+
+.USD:after {
+  position: absolute;
+  content: '\0024';
+  font-size: 17px;
+  margin: auto;
+  margin-left: 5px;
+}
+
+
+label {
+  display: inline-block;
+  text-align: left;
+  position: absolute;
+  top: -20%;
+  margin-left: 30px;
+}
+
+.heading {
+  margin: 10px 0 30px 0;
+  text-align: center;
+  width: 100%;
+  font-size: 3rem;
+  margin-top: 5%;
+  color: #f8f0f0;
+  background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* for removing mozilla - red shadow from input*/
+input:invalid {
+  box-shadow: 0 0 3px #eeeeee;
+}
+
+.rateField,
+.rupeeWord {
+  margin-left: 90px;
+
+}
+
+.rupeeWord {
+
+  display: block;
+}
+
+.split {
+  height: 40px;
+  width: 40px;
+  margin: auto;
+  display: block;
+  background: #faf7f7;
+  padding: 10px;
+  border-radius: 100%;
+}
+
+.inputParent.rate {
+  margin: 20px 0;
+}
+
+/* .background img {
+  height: 100vh;
+} */
+
+/* for table and small */
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 76%;
+    /* margin-left: 5%; */
+    margin-bottom: 5%;
+    display: block;
+
+  }
+
+  .heading {
+    margin-top: 20%;
+    font-size: 2.1rem;
+  }
+
+  .inputField {
+    /* background: #c8d8f8; */
+    height: 2rem;
+    /* border-radius: 5px; */
+    font-size: 1.2rem;
+    box-shadow: 0.1px #ffffff;
+    border: none;
+    border-bottom: 1px solid #282c34;
+    margin: 10px 0 10px 30px;
+    width: calc(100% - 80px);
+    position: relative;
+    z-index:100;
+    background:rgba(255,255,255,0.4);  
+  }
+
+  .flag {
+    height: 45px;
+    width: 45px;
+  }
+
+  .rateField,
+  .rupeeWord {
+    margin-left: 75px;
+    display: block;
+  }
+
+  label {
+    display: inline-block;
+    text-align: left;
+    position: absolute;
+    top: -30%;
+    margin-left: 30px;
+  }
+  .background{
+    height:200px;
+
+  }
+
+}
+
+/* only tablet */
+@media only screen and (min-width:768px) and (max-width:992px) {
+  .inputField {
+    /* background: #c8d8f8; */
+    height: 3rem;
+    /* border-radius: 5px; */
+    font-size: 2rem;
+    box-shadow: 0.1px #ffffff;
+    border: none;
+    border-bottom: 1px solid #282c34;
+    margin: 10px 0 10px 30px;
+    width: calc(100% - 120px);
+    position: relative;
+    z-index:100;
+    background:rgba(255,255,255,0.4);  
+  }
+  .heading {
+    margin-top: 20%;
+    font-size: 3.5rem;
+  }
+  label{
+    font-size:1.2rem;
+    top: -30%;
+  }
+  .card {
+    width: 60%;
+  }
+  .background{
+    height:400px;
+    
+  }
+  .background.dollar{
+    left:-100px;
+    top:-2%;
+  }
+  .background.rupee{
+    bottom:5%;
+    right:-10%;
+    
+  }
+  .rupeeSvg{
+    transform: rotate(10deg);
+  }
+  .dollarSvg{
+    transform: rotate(-20deg);
+  }
+  .rateField,
+  .rupeeWord {
+    margin-left: 80px;
+    display: block;
+  }
+}
+
